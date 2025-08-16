@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "alpaca-py"
+name = "alpaca-py-slim"
 # placeholder for poetry-dynamic-versioning
 version = "0.0.0"
-description = "The Official Python SDK for Alpaca APIs"
+description = "The Official Python SDK for Alpaca APIs - slim version"
 authors = [
-    "Rahul Chowdhury <rahul.chowdhury@alpaca.markets>",
+    "Nick Crews <nickcrews35@gmail.com>",
 ]
 readme = "README.md"
 license = "Apache-2.0"
-repository = "https://github.com/alpacahq/alpaca-py"
+repository = "https://github.com/nrcrews/alpaca-py-slim"
 documentation = "https://alpaca.markets/docs/python-sdk/"
 packages = [
     { include = "alpaca" }
