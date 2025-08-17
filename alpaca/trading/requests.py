@@ -1,7 +1,6 @@
 from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Optional, Union
 
-import pandas as pd
 from pydantic import model_validator
 
 from alpaca.common.enums import Sort
@@ -567,8 +566,8 @@ class GetCorporateAnnouncementsRequest(NonEmptyRequest):
 
     @model_validator(mode="before")
     def root_validator(cls, values: dict) -> dict:
-        since = pd.Timestamp(values.get("since")).date()
-        until = pd.Timestamp(values.get("until")).date()
+        since = datetime.fromisoformat(values.get("since")).date()
+        until = datetime.fromisoformat(values.get("until")).date()
 
         if (
             since is not None
