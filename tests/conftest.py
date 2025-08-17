@@ -36,4 +36,3 @@ def raw_client():
 def trading_client():
     client = TradingClient("key-id", "secret-key")
     return client
-
